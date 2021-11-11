@@ -1,10 +1,11 @@
 import get from './getElement.js'
+import { hideLoading } from './toggleLoading.js'
 
 const displayDrinks = ({drinks}) => { // object destructuring
   const section = get('.section-center')
   const title = get('.title')
   if(!drinks) {
-    // hide loading
+    hideLoading()
     title.textContent = 'sorry, no drinks match your search'
     section.innerHTML = null
     return;
@@ -23,7 +24,7 @@ const displayDrinks = ({drinks}) => { // object destructuring
     </article>
   </a>`
   }).join('')
-  // hide loading
+  hideLoading()
   title.textContent = ''
   section.innerHTML = newDrinks
 }

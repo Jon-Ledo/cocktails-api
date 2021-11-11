@@ -10,6 +10,9 @@ form.addEventListener('keyup', (e) => {
   e.preventDefault()
 
   const value = input.value
-  if(!value) return
+  if(!value) {
+    presentDrinks(`${baseURL}a`)
+    return
+  }
   presentDrinks(`${baseURL}${value}`)
 })
