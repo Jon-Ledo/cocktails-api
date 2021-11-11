@@ -1,6 +1,7 @@
 import presentDrinks from "./src/presentDrinks.js"
-// import getElement from "./src/getElement.js"
+import './src/searchForm.js'
 
+// for initial load
 const URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=c'
 
 
