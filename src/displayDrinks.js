@@ -8,7 +8,7 @@ const displayDrinks = ({drinks}) => { // object destructuring
     hideLoading()
     title.textContent = 'sorry, no drinks match your search'
     section.innerHTML = null
-    return;
+    return
   }
   const newDrinks = drinks.map((drink) => {
     const {
@@ -27,7 +27,9 @@ const displayDrinks = ({drinks}) => { // object destructuring
   hideLoading()
   title.textContent = ''
   section.innerHTML = newDrinks
+  return section
 }
 
 export default displayDrinks
+
 
